@@ -12,18 +12,18 @@ class Game extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div>
+      <div className="All-rows">
+        <div className="Left-row" >
           <Board />
           <Board />
           <Board />
         </div>
-        <div>
+        <div className="Center-row">
           <Board />
           <Board />
           <Board />
         </div>
-        <div>
+        <div className="Right-row">
           <Board />
           <Board />
           <Board />

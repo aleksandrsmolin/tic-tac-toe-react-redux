@@ -1,20 +1,17 @@
-.App {
+.Center-row {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Left-row {
+  text-align: left;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Right-row {
+  text-align: right;
 }
 
-.App-intro {
+.All-rows {
+  margin: 20px;
   font-size: large;
 }
 

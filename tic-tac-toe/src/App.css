@@ -1,21 +1,15 @@
 .Center-row {
-  text-align: center;
+  border: 2px solid red;
 }
 
 .Left-row {
-  text-align: left;
+  border: 2px solid green;
 }
 
 .Right-row {
-  text-align: right;
+  border: 2px solid blue;
 }
 
 .All-rows {
-  margin: 20px;
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  text-align: center;
 }

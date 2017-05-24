@@ -2,16 +2,15 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   'Center-row': {
-    'textAlign': 'center'
+    'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': 'red' }]
   },
   'Left-row': {
-    'textAlign': 'left'
+    'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': 'green' }]
   },
   'Right-row': {
-    'textAlign': 'right'
+    'border': [{ 'unit': 'px', 'value': 2 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': 'blue' }]
   },
   'All-rows': {
-    'margin': [{ 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }, { 'unit': 'px', 'value': 20 }],
-    'fontSize': [{ 'unit': 'string', 'value': 'large' }]
+    'textAlign': 'center'
   }
 });

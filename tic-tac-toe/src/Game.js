@@ -6,29 +6,36 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      allBoards: Array(9).fill({
+        board: [{
+          squares: Array(9).fill(null),
+          xIsNext: true,
+        }],
+      }),
     };
   }
 
   render() {
+    console.log(this.state.allBoards);
     return (
       <div className="All-rows">
-        <div className="Left-row" >
-          <Board />
-          <Board />
-          <Board />
+        <div>
+          <td className="Left-row"> <Board /> </td>
+          <td className="Left-row"> <Board /> </td>
+          <td className="Left-row"> <Board /> </td>
         </div>
-        <div className="Center-row">
-          <Board />
-          <Board />
-          <Board />
+        <div>
+          <td className="Center-row"> <Board /> </td>
+          <td className="Center-row"> <Board /> </td>
+          <td className="Center-row"> <Board /> </td>
         </div>
-        <div className="Right-row">
-          <Board />
-          <Board />
-          <Board />
+        <div >
+          <td className="Right-row"> <Board /> </td>
+          <td className="Right-row"> <Board /> </td>
+          <td className="Right-row"> <Board /> </td>
         </div>
       </div>
+
     );
   }
 }

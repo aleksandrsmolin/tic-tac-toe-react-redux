@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 function Square(props) {
   return (
-    <button onClick={this.props.handelOnClick}>
+    <button onClick={this.props.onClick}>
       {props.value}
     </button>
   );
@@ -13,11 +13,9 @@ function Square(props) {
 class Board extends Component {
 
   renderSquare(i) {
-    handelOnClick(i) {
-      dispatch(triggerSquare(i))
-    };
     return (
       <Square
+        onClick={dispatch(triggerSquare(i))}
         value={i}
       />
     );

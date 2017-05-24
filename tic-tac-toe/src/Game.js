@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import Board from './Board';
 import './App.css';
 
+triggerSquare = (i) => {
+  return {
+    type: 'TRIGGER_SQUARE',
+    i,
+  };
+};
+
+const gameBody = (state = {}, action) => {
+  switch (action.type) {
+    case 'TRIGGER_SQUARE':
+      return {
+        i: action.i,
+      }
+    default:
+      return state;
+  }
+}
+
 class Game extends Component {
   constructor(props) {
     super(props);

@@ -4,5 +4,9 @@ import Game from './Game';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-ReactDOM.render(<Game />, document.getElementById('root'));
+ReactDOM.render(
+
+  <Game />
+
+  , document.getElementById('root'));
 registerServiceWorker();

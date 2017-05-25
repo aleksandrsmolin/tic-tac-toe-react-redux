@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
+import { createStore } from 'redux';
 import Board from './Board';
 import './App.css';
 
-triggerSquare = (i) => {
-  return {
-    type: 'TRIGGER_SQUARE',
-    i,
-  };
-};
+const initialState = {
+  winner: null,
+  allBoards: Array(9).fill({
+    board: [{
+      squares: Array(9).fill(null),
+      xIsNext: true,
+      boardWinner: null,
+    }],
+  }),
 
-const gameBody = (state = {}, action) => {
-  switch (action.type) {
-    case 'TRIGGER_SQUARE':
-      return {
-        i: action.i,
-      }
-    default:
-      return state;
-  }
 }
+
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case TRIGGER_SQUARE:
+    let square = state.allBoards[num[i]];
+    let turn = state.allBoards[num].xIsNext;
+      return Object.assign({}, state, {
+        square: turn ? "X" & "0"
+        xIsNext: !turn
+      })
+  
+  default:
+  return state
+}
+}
+
+const store = createStore(reducer, );
 
 class Game extends Component {
   constructor(props) {
@@ -33,24 +46,33 @@ class Game extends Component {
     };
   }
 
+
+renderBoard(num) {
+  return (
+    <Board
+    squares={current.squares}
+    triggerSquar={(i)=> store.dispatch}
+    />
+  )
+
+}
   render() {
-    console.log(this.state.allBoards);
     return (
       <div className="All-rows">
         <div>
-          <td className="Left-row"> <Board /> </td>
-          <td className="Left-row"> <Board /> </td>
-          <td className="Left-row"> <Board /> </td>
+          <td className="Left-row"> {renderBoard(0)} </td>
+          <td className="Left-row"> {renderBoard(1)} </td>
+          <td className="Left-row"> {renderBoard(2)} </td>
         </div>
         <div>
-          <td className="Center-row"> <Board /> </td>
-          <td className="Center-row"> <Board /> </td>
-          <td className="Center-row"> <Board /> </td>
+          <td className="Center-row"> {renderBoard(3)} </td>
+          <td className="Center-row"> {renderBoard(4)} </td>
+          <td className="Center-row"> {renderBoard(5)} </td>
         </div>
         <div >
-          <td className="Right-row"> <Board /> </td>
-          <td className="Right-row"> <Board /> </td>
-          <td className="Right-row"> <Board /> </td>
+          <td className="Right-row"> {renderBoard(6)} </td>
+          <td className="Right-row"> {renderBoard(7)} </td>
+          <td className="Right-row"> {renderBoard(8)} </td>
         </div>
       </div>
 
